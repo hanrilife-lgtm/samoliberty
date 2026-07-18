@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📚 Библиотека силы</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="app" id="app">
+        <!-- ШАПКА -->
+        <header class="header">
+            <h1>📚 Библиотека силы</h1>
+            <div class="user-stats">
+                <span id="levelBadge">🗿 Искатель</span>
+                <span id="booksRead">0 книг</span>
+            </div>
+        </header>
+
+        <!-- БИБЛИОТЕКА -->
+        <section id="libraryView" class="view active">
+            <div class="library-header">
+                <h2>🔥 Книги, которые меняют жизнь</h2>
+                <p class="sub">Твоя личная коллекция мудрости. Читай — становись сильнее.</p>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="stoicism">Стоицизм</button>
+                    <button class="filter-btn" data-filter="psychology">Психология</button>
+                    <button class="filter-btn" data-filter="wisdom">Мудрость</button>
+                    <button class="filter-btn" data-filter="modern">Современное</button>
+                </div>
+            </div>
+            <div class="book-grid" id="bookGrid"></div>
+        </section>
+
+        <!-- ЧИТАЛКА -->
+        <section id="readerView" class="view">
+            <button class="back-btn" id="backToLibrary">← Назад к библиотеке</button>
+            <div class="reader-header">
+                <h2 id="readerTitle"></h2>
+                <p id="readerAuthor"></p>
+                <div class="progress-wrap">
+                    <div class="progress-bar"><div class="fill" id="readerProgress"></div></div>
+                    <span id="progressPercent">0%</span>
+                </div>
+            </div>
+            <div class="reader-content" id="readerContent"></div>
+            <div class="reader-nav">
+                <button id="prevChapter">← Предыдущая</button>
+                <span id="chapterIndicator">Глава 1</span>
+                <button id="nextChapter">Следующая →</button>
+            </div>
+            <div class="quote-section">
+                <h3>💡 Мои цитаты</h3>
+                <ul id="quoteList"></ul>
+                <button id="addQuoteBtn">📌 Добавить выделенное как цитату</button>
+                <p class="hint">Выдели текст мышкой, затем нажми кнопку</p>
+            </div>
+        </section>
+
+        <!-- ПОДВАЛ -->
+        <footer class="footer">
+            <p>📖 Все книги в открытом доступе. Сделано для внутренней силы.</p>
+            <button class="reset-btn" id="resetBtn">⚠️ Сбросить прогресс</button>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
